@@ -1,0 +1,8 @@
+{
+  "name": "airprep",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "node tests.mjs && node flow-tests.mjs"
+  }
+}

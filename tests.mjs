@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {createRequire} from 'node:module';
+const require=createRequire(import.meta.url),E=require('./dist/engine.js'),b=JSON.parse(fs.readFileSync('dist/data/questions.json'));
+assert(b.every(E.valid));assert.equal(new Set(b.map(q=>q.id)).size,b.length);
+let sets=new Set();for(let s of ['IQ','English','GK'])for(let n=1;n<=40;n++){let q=E.select(b,s,n*997+['IQ','English','GK'].indexOf(s)*311);assert.equal(q.length,25);assert.equal(new Set(q.map(x=>x.id)).size,25);assert(q.every(x=>x.subject===s));sets.add(q.map(x=>x.id).join(','));let correct=Object.fromEntries(q.map(x=>[x.id,x.answer]));assert.equal(E.grade(q,correct).score,100);assert.equal(E.grade(q,{}).score,0)}assert.equal(sets.size,120);
+let q=b.slice(0,25),a=Object.fromEntries(q.slice(0,10).map(x=>[x.id,x.answer]));assert.equal(E.grade(q,a).score,40);
+const results=[{subject:'GK',...E.grade(q,a)}];assert.equal(E.analyse(results).GK.accuracy,40);assert.equal(E.analyse(results).IQ.accuracy,null);
+assert(!E.valid({...b[0],answer:4}));assert(!E.valid({...b[0],subject:'Math'}));assert(!E.valid({...b[0],options:['x','x','y','z']}));
+console.log(`Passed: ${b.length} valid questions; 120 distinct test sets; scoring, analysis and import validation`);
