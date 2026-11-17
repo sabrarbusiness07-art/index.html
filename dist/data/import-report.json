@@ -1,0 +1,18 @@
+{
+  "ready": 652,
+  "subjects": {
+    "IQ": 100,
+    "English": 30,
+    "GK": 522
+  },
+  "newReviewed": 459,
+  "sourceChunks": 1344,
+  "parsedCandidates": 1051,
+  "reviewedAbbreviations": 68,
+  "sourcePairs": 994,
+  "missingFiles": [
+    "বাংলাদেশ বিমান বাহিনীর .pdf",
+    "ফাইটার্স (1).pdf"
+  ],
+  "allFilesImported": false
+}

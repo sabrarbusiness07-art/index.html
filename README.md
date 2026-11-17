@@ -27,17 +27,17 @@ GitHub Pages-এ main branch-এর root প্রকাশ করলে root in
 
 ## কনটেন্টের প্রকৃত অবস্থা — সম্পূর্ণ PDF আমদানি নয়
 
-পরীক্ষার উপযোগী **১৯৩টি** ব্যাখ্যাসহ MCQ:
+পরীক্ষার উপযোগী **৬৫২টি** ব্যাখ্যাসহ MCQ:
 
 | বিষয় | সংখ্যা | উৎস |
 |---|---:|---|
 | IQ | ১০০ | সম্পূরক, সূত্রভিত্তিক অনুশীলন |
 | English | ৩০ | সম্পূরক grammar/vocabulary অনুশীলন |
-| GK | ৬৩ | সাধারণ জ্ঞান PDF থেকে পর্যালোচিত ও সংশোধিত তথ্য |
+| GK | ৫২২ | সাধারণ জ্ঞান ও A To Z PDF থেকে সম্পাদিত প্রশ্ন, সামরিক GK ও পূর্ণরূপ |
 
-১২০টি সেট একই ব্যাংক ব্যবহার করে; এগুলো ৩,০০০টি আলাদা প্রশ্ন নয়। বিভিন্ন সেটে প্রশ্ন পুনরাবৃত্তি হয়।
+প্রতি বিষয়ের ৪০টি সেটের মধ্যে সেই বিষয়ের সব প্রস্তুত প্রশ্ন অন্তত একবার রাখা হয়েছে। নতুন বাছাই পদ্ধতি test number অনুযায়ী deterministic; সংরক্ষিত পুরোনো পরীক্ষার প্রশ্ন ও ফলাফল অপরিবর্তিত থাকে। ১২০টি সেট একই ব্যাংক ব্যবহার করে; এগুলো ৩,০০০টি আলাদা প্রশ্ন নয়। বিভিন্ন সেটে প্রশ্ন পুনরাবৃত্তি হয়।
 
-প্রাপ্ত দুটি PDF-এর সব ৬১ পৃষ্ঠা বাংলা+ইংরেজি OCR করা হয়েছে। প্রয়োজনীয় GK-সম্পর্কিত ৪৭টি পৃষ্ঠার স্ক্যান ও OCR রাখা হয়েছে। ব্যক্তিগত সনদ, ফরম ও বিষয়বহির্ভূত আবেদন নির্দেশনার পৃষ্ঠা বাদ। `data/drafts.json`-এ **১,৩৪৪টি অযাচাইকৃত OCR অংশ** আছে; এগুলো ১,৩৪৪টি প্রস্তুত MCQ নয়। একই তথ্য পুনরাবৃত্ত, ভাঙা লেখা ও ভুল থাকতে পারে। ওয়েবসাইটের প্রশ্নব্যাংক → OCR খসড়া যাচাই দিয়ে প্রতিটি অংশ মূল পৃষ্ঠার সঙ্গে মিলিয়ে MCQ করা যাবে। এগুলো স্বয়ংক্রিয়ভাবে পরীক্ষায় ঢোকে না।
+প্রাপ্ত দুটি PDF-এর সব ৬১ পৃষ্ঠা বাংলা+ইংরেজি OCR করা হয়েছে। প্রয়োজনীয় GK-সম্পর্কিত ৪৭টি পৃষ্ঠার স্ক্যান ও OCR রাখা হয়েছে। ব্যক্তিগত সনদ, ফরম ও বিষয়বহির্ভূত আবেদন নির্দেশনার পৃষ্ঠা বাদ। `data/drafts.json`-এ **১,৩৪৪টি অযাচাইকৃত OCR অংশ** আছে; এগুলো ১,৩৪৪টি প্রস্তুত MCQ নয়। একই তথ্য পুনরাবৃত্ত, ভাঙা লেখা ও ভুল থাকতে পারে। ওয়েবসাইটের প্রশ্নব্যাংক → PDF থেকে সব উদ্ধার করা অংশ ট্যাবে সব ১,৩৪৪টি উৎসাংশ দেখা যায়। প্রতিটির মূল স্ক্যান এবং পাওয়া গেলে সংশোধিত MCQ দেখানো হয়। একই প্রশ্ন একাধিক উৎসাংশে থাকতে পারে। প্রশ্নব্যাংক → OCR উৎসের তালিকা দিয়েও প্রতিটি অংশ মূল পৃষ্ঠার সঙ্গে মিলিয়ে MCQ করা যাবে। এগুলো স্বয়ংক্রিয়ভাবে পরীক্ষায় ঢোকে না।
 
 এই দুটি ফাইল ৩২ MiB transfer limit-এর কারণে খোলা যায়নি:
 
@@ -50,7 +50,7 @@ GitHub Pages-এ main branch-এর root প্রকাশ করলে root in
 
 ## ডেটা
 
-`dist/data/questions.json` প্রস্তুত প্রশ্ন; `sources.json` OCR উৎস; `drafts.json` review queue। `dist/sources/`-এ সংশ্লিষ্ট স্ক্যান। ফলাফল localStorage-এর `airprep-v1` key-তে থাকে। ব্রাউজার ডেটা clear করলে হারাবে, তাই নিয়মিত backup নিন। কোনো login, server database, automatic multi-device sync নেই।
+`dist/data/questions.json` প্রস্তুত প্রশ্ন; `imported.json` সব ১,৩৪৪টি উৎসাংশ; `parsed-sources.json` প্রশ্ন-উত্তর পৃথক করার নিরীক্ষণ রেকর্ড; `import-report.json` আমদানির প্রকৃত অবস্থা; `sources.json` OCR উৎস; `drafts.json` review queue। `dist/sources/`-এ সংশ্লিষ্ট স্ক্যান। ফলাফল localStorage-এর `airprep-v1` key-তে থাকে। ব্রাউজার ডেটা clear করলে হারাবে, তাই নিয়মিত backup নিন। কোনো login, server database, automatic multi-device sync নেই।
 
 MCQ JSON schema: `{id, subject, topic, question, options:[A,B,C,D], answer:0..3, explanation, source, page?}`। চারটি আলাদা অপশন এবং ব্যাখ্যা বাধ্যতামূলক। duplicate id আমদানি হয় না। UI থেকে উদাহরণ JSON ডাউনলোড করা যায়। স্ক্যান PDF সরাসরি browser-এ upload করে automatic MCQ তৈরি এই সংস্করণে নেই।
 
@@ -64,7 +64,7 @@ node flow-tests.mjs
 node --check dist/app.js
 ```
 
-Data validation, ১২০টি আলাদা test sequence, grading, weakness analysis এবং minimal DOM simulation-এ dashboard/exam/resume/result/retest/bank rendering পাস করেছে। Managed preview relay চালু হয়নি; বাস্তব browser visual, mobile layout, file-picker ও download flow সরাসরি যাচাই করা যায়নি। DOM simulation পূর্ণ browser test নয়।
+Data validation, ১২০টি আলাদা test sequence, সব প্রস্তুত প্রশ্নের test coverage, মূল উৎস সংরক্ষণ, সংশোধিত তথ্যের regression checks, grading, weakness analysis এবং minimal DOM simulation-এ dashboard/exam/resume/result/retest/bank rendering পাস করেছে। Managed preview relay চালু হয়নি; বাস্তব browser visual, mobile layout, file-picker ও download flow সরাসরি যাচাই করা যায়নি। DOM simulation পূর্ণ browser test নয়।
 
 ## Design credit
 
